@@ -1,20 +1,24 @@
-import java.util.ArrayList;
-import java.util.List;
-
 class Transaction {
-    private String transactionId;
-    private double amount;
+    private String clientName;
+    private String product;
+    private double price;
 
-    public Transaction(String transactionId, double amount) {
-        this.transactionId = transactionId;
-        this.amount = amount;
+    public Transaction(String clientName, String product, double price) {
+        this.clientName = clientName;
+        this.product = product;
+        this.price = price;
     }
 
-    public String getTransactionId() {
-        return transactionId;
+    public String getClientName() {
+        return clientName;
     }
 
-    public double getAmount() {
-        return amount;
+    @Override
+    public String toString() {
+        return "Client: " + clientName + ", Product: " + product + ", Price: ₱" + price;
+    }
+
+    public double getPrice() {
+        return price;
     }
 }
