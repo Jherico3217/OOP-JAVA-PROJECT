@@ -6,7 +6,7 @@ public class Main {
         CashierSystem cashierSystem = new CashierSystem();
 
         while (true) {
-            System.out.println("Main Menu: ");
+            System.out.println("Choose interface: ");
             System.out.println("1. Admin");
             System.out.println("2. Client");
             System.out.println("3. Exit");
@@ -67,7 +67,7 @@ public class Main {
 
     private static void clientInterface(Scanner scanner, CashierSystem cashierSystem) {
         System.out.println("Enter client name: ");
-        String clientName = scanner.nextLine();
+        String clientName = scanner.next();
         cashierSystem.viewTransactions(clientName);
     }
 }
